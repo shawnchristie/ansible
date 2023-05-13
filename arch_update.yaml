@@ -1,0 +1,11 @@
+---
+- hosts: arch
+  gather_facts: yes
+  become: yes
+
+  tasks:
+    - name: Run the equivelent of "pacman -Syu"
+      pacman: 
+        update_cache: yes
+        upgrade: yes
+ 
